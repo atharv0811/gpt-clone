@@ -1,0 +1,175 @@
+.screen {
+  background: linear-gradient(to top right, #032003, #000, #053205) !important;
+}
+
+.sidebar {
+  width: 17rem;
+  height: 100vh;
+  padding: 10px;
+}
+
+.sidebar-top {
+  background-color: #1F1F1F;
+}
+
+.logo {
+  width: 1.5rem;
+}
+
+.x {
+  display: none;
+}
+
+.sidebar-main {
+  background-color: #1F1F1F;
+  height: calc(100vh - 74.667px) !important;
+}
+
+.new-chat-btn {
+  background-color: #51DA4C;
+
+  &:hover {
+    background-color: #44b540;
+  }
+}
+
+.chats {
+  height: calc(100% - 48px);
+  margin-bottom: 5px;
+  overflow-y: auto;
+}
+
+.chat {
+  background-color: #424242;
+  cursor: pointer;
+}
+
+.chat.active {
+  background-color: #053205;
+}
+
+.trash {
+  cursor: pointer;
+  color: #696969;
+  transition: color .2s ease;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.main {
+  width: calc(100vw - 272px);
+  padding: 10px 10px 10px 0;
+}
+
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.chatbox {
+  height: calc(100vh - 50.667px) !important;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.message-box {
+  height: calc(100% - 51px);
+  width: 95%;
+  overflow-y: auto;
+}
+
+.message-box p:first-child {
+  margin-bottom: 0;
+}
+
+.message {
+  max-width: 75%;
+  margin: .5rem 0;
+}
+
+.user-message {
+  background-color: #51DA4C;
+  color: white;
+  border-radius: 15px;
+}
+
+.bot-message {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 15px;
+}
+
+.form {
+  max-width: 90%;
+}
+
+.input {
+  outline: none;
+}
+
+.submit-btn {
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #353535;
+  background: #44b540;
+
+  &:hover {
+    color: #171717;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1040;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .x {
+    display: block;
+  }
+
+  .main {
+    height: 100vh;
+    width: 100vw;
+    padding: 10px;
+  }
+
+  .topbar {
+    width: 100vw;
+  }
+
+  .menu {
+    display: block
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .chatbox {
+    height: calc(100vh - 74.667px) !important;
+  }
+}
